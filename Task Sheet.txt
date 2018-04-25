@@ -6,6 +6,7 @@ Post pictures of specimen orientation and fracture directions
 
 John:
 Work on presentation
+Gather references
 
 
 Martin:
@@ -13,4 +14,4 @@ Use ImageJ to find angles from specimen
 Calculate stress intensity factors from angles
 
 Nick:
-Work on presentation
+Work on presentation with John
