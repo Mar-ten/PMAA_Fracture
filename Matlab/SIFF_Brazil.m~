@@ -19,7 +19,7 @@ for i = 1:length(T_3)
     S(i) = (S_4(i)-S_3(i))/(.4-.3)*(ratio-.3) + S_3(i);
 end
 theta = (pi/4)
-s = sin(theta);
+s = sin(theta); % not sure if this actua
 
 
 c = cos(theta);
