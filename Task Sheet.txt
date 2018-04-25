@@ -1,0 +1,16 @@
+Tasks
+
+Nik:
+Write code to calculate strain based on incident wave. Calculate far field stress
+Post pictures of specimen orientation and fracture directions
+
+John:
+Work on presentation
+
+
+Martin:
+Use ImageJ to find angles from specimen
+Calculate stress intensity factors from angles
+
+Nick:
+Work on presentation
