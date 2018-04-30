@@ -2,22 +2,22 @@
 close all
 clear all
 
-filename=['T00',num2str(15),'ALL.csv'];
+filename=['T00',num2str(17),'ALL.csv'];
 data=importdata(filename,',',16);
 time=data.data(:,1);
 v_incident=data.data(:,2);
 v_transmitted=data.data(:,4);
 v_break=data.data(:,6);
 
-figure
-plot(time,v_incident,time,v_transmitted,time,v_break)
+% figure
+% plot(time,v_incident,time,v_transmitted,time,v_break)
 
 speed = 5.0732e+03; %Original Value
 %speed = 5.05e+03;
 
 L= 2.438/2;
 L2=1.930/2;
-dt=8.0000e-09;
+dt=time(2)-time(1);
 
 time_shift=L/speed;
 index_shift=round(time_shift/dt);
@@ -36,12 +36,12 @@ v_diff=v_forward+v_back;
 
 
 % figure
-% plot(clipTime,v_forward,clipTime,v_back,clipTime,v_diff,clipTime,v_trans)
-% legend({'Incident','Reflected','Difference','Transmitted'},'FontSize',14);
+% plot((1:length(v_forward))*dt,v_forward,(1:length(v_forward))*dt,v_back,(1:length(v_forward))*dt,v_diff,(1:length(v_forward))*dt,v_trans,(1:length(v_forward))*dt,v_break)
+% legend({'Incident','Reflected','Difference','Transmitted','Conduction Gauge'},'FontSize',14);
 
 
 %% Trim Data
-Lcut=round(length(v_diff)/3);
+Lcut=round(length(v_diff)/4);
 
 v_forward(1:Lcut)=[]; v_forward(end-Lcut:end)=[];
 v_back(1:Lcut)=[]; v_back(end-Lcut:end)=[];
@@ -70,4 +70,4 @@ e_trans=Volt2Strain(v_trans);
 
 figure;
 plot(clipTime,e_forward,clipTime,e_back,clipTime,e_diff,clipTime,e_trans)
-legend('$\vareps_forward$','$\vareps_back$','$\vareps_diff$','$\vareps_trans$')
+legend({'$\varepsilon_{forward}$','$\varepsilon_{back}$','$\varepsilon_{diff}$','$\varepsilon_{trans}$'},'Interpreter','latex','FontSize',14)
