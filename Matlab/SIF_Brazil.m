@@ -6,34 +6,31 @@ a = 4; % [mm] Half of the intial crack length
 b = 3; % [mm] thickness of specimen
 r = 12.5; % [mm] radius of disk
 P = 100;
-<<<<<<< HEAD:Matlab/SIF_Brazil.m
+
 ratio = a/r;
 theta = (pi/4); % angle of inclination
 
-=======
->>>>>>> a789fa0195966e87e1687cfc5c91433c6fc91b15:Matlab/SIFF_Brazil.m
+
 % Ai theta and Bi thetas constants from Atkinson
 T_3 = [1.135551 0.533477 0.39164 .0325033]; % a/r = .3
 T_4 = [1.24314 0.559734 0.404603 0.408597 0.334831];%a/r = .4
 S_3= [1.089702 0.522272 0.386086 0.387518 0.320834];% a/r = .3
-<<<<<<< HEAD:Matlab/SIF_Brazil.m
-S_4= [1.160796 0.539824 0.394822 0.397403 0.327411];;%a/r = .4
 
-=======
 S_4= [1.160796 0.539824 0.394822 0.397403 0.327411];%a/r = .4
->>>>>>> a789fa0195966e87e1687cfc5c91433c6fc91b15:Matlab/SIFF_Brazil.m
+
+
+S_4= [1.160796 0.539824 0.394822 0.397403 0.327411];%a/r = .4
+
 % Interploate for actual a/r
 
 for i = 1:length(T_3)
     T(i) = (T_4(i)-T_3(i))/(.4-.3)*(ratio-.3) + T_3(i);
     S(i) = (S_4(i)-S_3(i))/(.4-.3)*(ratio-.3) + S_3(i);
 end
-<<<<<<< HEAD:Matlab/SIF_Brazil.m
-=======
-theta = (pi/4);
-s = sin(theta);
 
->>>>>>> a789fa0195966e87e1687cfc5c91433c6fc91b15:Matlab/SIFF_Brazil.m
+
+
+
 
 s = sin(theta); % not sure if this actually supposed to be theata????
 c = cos(theta);
@@ -56,7 +53,6 @@ for k = 1:length(T)
     N_i(k) = T(k).*ratio.^(2*k - 2)*A(k);
     N_ii(k) = S(k)*ratio.^(2*k-2).*B(k);
 end
-<<<<<<< HEAD:Matlab/SIF_Brazil.m
 N_I = sum(N_i); % sum all N's for SIF mode I
 N_II = 2*sin(2*theta)*sum(N_ii);% sum all N's for SIF mode II
 
@@ -64,12 +60,12 @@ K_I = P.*sqrt(a).*N_I/(sqrt(pi)*r*b); % Mode I SIF
 K_II = P.*sqrt(a).*N_II/(sqrt(pi)*r*b);% Mode II SIF
 Mix_I = K_I/(K_II+K_I); % Percent Mode I
 Mix_II = K_II/(K_II+K_I); % Percent Mode II
-=======
+
 N_I = sum(N_i);
 N_II = 2*sin(2*theta)*sum(N_ii);
 K_I = P.*sqrt(a).*N_I/(sqrt(pi)*r*b);
 K_II = P.*sqrt(a).*N_II/(sqrt(pi)*r*b);
->>>>>>> a789fa0195966e87e1687cfc5c91433c6fc91b15:Matlab/SIFF_Brazil.m
+
 
 
 
