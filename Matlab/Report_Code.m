@@ -8,9 +8,9 @@ SD=std(Theta,0,2);
 Theta_Mean=angles.data(:,5);
 K1=zeros(size(beta)); K2=K1; N1=K1; N2=K1; 
 
-a = 4;
-R=25/2;
-B=3;
+a = 4/1000;
+R=25/2/100;
+B=3/1000;
 
 K_I=sqrt(pi*a).*cosd(beta).^2;
 K_II=sqrt(pi*a).*cosd(beta).*sind(beta);
