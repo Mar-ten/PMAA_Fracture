@@ -1,0 +1,15 @@
+filename='Static0_005in-min.csv';
+    data=importdata(filename,',',16);
+    Load=data.data(:,1);
+    Time=data.data(:,2);
+    Extension=data.data(:,3);
+    Stress = data.data(:,4);
+    
+end
+
+
+
+
+P = 100;
+theta = 48;
+[K_I,K_II,Mix_I,Mix_II] = SIF_Brazil(P,theta)

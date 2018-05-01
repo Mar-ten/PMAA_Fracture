@@ -100,6 +100,12 @@ In this work, the dynamic initiation fracture toughness of polymethyl methacryla
 
 \subsubsection {Split Hopkinson Pressure Bar} % Nick
 
+A Split Hopkinson Pressure Bar (SHPB) is built off of three main parts, the striker bar, the incident bar, and the transmitted bar. A gas gun is used to accelerate the striker bar into the incident bar creating a compression wave down the length of the bar. Upon reaching a sample placed between the incident and transmitted bars, this pulse deforms the sample at a high strain rate, imparting a new compression wave into the transmitted bar. The remainder of the energy is reflected back as a tensile wave. The initial pulse has a wavelength twice the length of the striker bar, necessitating an incident bar length at least four times that of the striker bar.
+
+The biggest working assumption of a SHPB is that the stress wave propagates only along the length of the bar. In order for this to be true, the bar must be made from ma homogenous, isotropic material with a uniform cross section. Additionally, the incident bar material's elastic limit must not be exceeded by the impact of the striker bar. If the length of the bar is at least twenty times greater than its diameter, it can be assumed that the stress is uniform across the cross section. In finite length bars, dispersion must be compensated for as well because different frequencies travel at different speeds. This is done by pulse shaping and post-processing. Pulse shaping is the use of a sacrificial material to reduce the initial slope of the incident pulse to more closely resemble the specimen material response. This reduces the high frequency content of the resulting signal. Post processing equations use known wave velocities to calculate the change in phase angle as the pulse moves down the length of the bar. This then allows the pulse to be reconstructed at any point in time in the form it was at that point.
+
+Once the wave has been reconstructed at the instant the specimen began to be strained, the measured voltages are converted into strains. These strains are then used to calculate forces, which in turn are converted into stress if so desired. 
+
 
 \subsubsection{Dynamic Fracture Mechanics} % Nick
 
