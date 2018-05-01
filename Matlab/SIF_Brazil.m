@@ -3,7 +3,7 @@
 % 4/25/2018
 % P is force at crack propagation
 % theta is inclination angle in degrees
-function [K_I,K_II,Mix_I,Mix_II] = SIF_Brazil(P,theta)
+function [K_I,K_II,N_I,N_II] = SIF_Brazil(P,theta)
 
 a = 4; % [mm] Half of the intial crack length
 b = 3; % [mm] thickness of specimen
