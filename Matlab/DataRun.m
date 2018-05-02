@@ -10,6 +10,14 @@ List={'T0014All.csv';
     'T0021All.csv';
     'T0022All.csv'};
 
+
+a = 4/1000;
+R=25/2/1000;
+B=3/1000;
+
+angles=importdata('Angles2.xlsx');
+beta=angles.data(:,2);
+
 S_Ult=zeros(length(List),2);
 rate=zeros(size(List));
 for i=1:length(List)
@@ -23,6 +31,13 @@ strength=[S_Ult(:,2);zeros(length(StaticList),1)]; % choose 1 for differences si
 
 for i=1:length(StaticList)
     [~,strength(i+length(List)),rate(i+length(List))]=QuasiStatic(StaticList{i});
+end
+
+
+P=strength*pi*R*B;
+
+for i= 1:length(beta)
+    [K1(i),K2(i),N1(i),N2(i)]=SIF_Brazil(P(i),beta(i)); % Creates normalized values of K1 and K2 
 end
 
 K1=sqrt(pi*0.004)*strength/1E6;

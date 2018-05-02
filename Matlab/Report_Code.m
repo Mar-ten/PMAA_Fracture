@@ -9,7 +9,7 @@ Theta_Mean=angles.data(:,5);
 K1_S =zeros(size(beta)); K2=K1_S; N1=K1_S; N2=K1_S; 
 
 a = 4/1000;
-R=25/2/100;
+R=25/2/1000;
 B=3/1000;
 
 alpha=0:5:90;
@@ -17,9 +17,9 @@ alpha=0:5:90;
 K_I=sqrt(pi*a).*cosd(beta).^2;
 K_II=sqrt(pi*a).*cosd(beta).*sind(beta);
 
-for i= 1:length(beta)
-    [K_I(i),K_II(i),N1(i),N2(i)]=SIF_Brazil(1,beta(i)); % Creates normalized values of K1 and K2 
-end
+% for i= 1:length(beta)
+%     [K1_S(i),K2_S(i),N1(i),N2(i)]=SIF_Brazil(1,beta(i)); % Creates normalized values of K1 and K2 
+% end
 
 
 T_Max=-2*atand(K_I./(4.*K_II)-1/4*sqrt((K_I./K_II).^2+8));
@@ -43,12 +43,9 @@ strength=strength(1:9);
 K1=strength.*sqrt(pi*a).*cosd(beta).^2;
 K2=strength.*sqrt(pi*a).*cosd(beta).*sind(beta);
 
-K1=strength/1E6.*K_I;
-K2=strength/1E6.*K_II;
-
 
 figure; hold on
-plot(K_II/max(K_I),K_I/max(K_I),'-','LineWidth',2)
+plot(K_II/max(K_II),K_I/max(K_I),'-','LineWidth',2)
 plot(K2/max(K2),K1/max(K1),'kd')
 xlabel('K_{II}/K_{II C}','FontSize',16)
 ylabel('K_{I}/K_{I C}','FontSize',16)

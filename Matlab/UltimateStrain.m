@@ -89,12 +89,12 @@ e_back=Volt2Strain(v_back);
 e_diff=Volt2Strain(v_diff);
 e_trans=Volt2Strain(v_trans);
 
-figure;
-plot(clipTime,e_forward,clipTime,e_back,clipTime,e_diff,clipTime,e_trans)
-legend({'$\varepsilon_{forward}$','$\varepsilon_{back}$','$\varepsilon_{diff}$','$\varepsilon_{trans}$'},'Interpreter','latex','FontSize',14)
-xlabel('Time (s)')
-ylabel('Strain')
-title(filename)
+% figure;
+% plot(clipTime,e_forward,clipTime,e_back,clipTime,e_diff,clipTime,e_trans)
+% legend({'$\varepsilon_{forward}$','$\varepsilon_{back}$','$\varepsilon_{diff}$','$\varepsilon_{trans}$'},'Interpreter','latex','FontSize',14)
+% xlabel('Time (s)')
+% ylabel('Strain')
+% title(filename)
 %% Forces
 
 F_1=A*E.*e_diff;
