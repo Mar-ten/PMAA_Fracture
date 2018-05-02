@@ -45,8 +45,12 @@ K2=strength.*sqrt(pi*a).*cosd(beta).*sind(beta);
 
 
 figure; hold on
-plot(K_I/K_I(1),K_II/K_I(1),'-*')
-plot(K2/K1(1),K1/K1(1),'kd')
+plot(K_II/max(K_II),K_I/max(K_I),'-*')
+plot(K2/max(K2),K1/max(K1),'kd')
+xlabel('K_{II}/K_{II C}','FontSize',16)
+ylabel('K_{I}/K_{I C}','FontSize',16)
+legend({'Theoretical','Reflected Wave'},'Location','best','FontSize',16)
+set(gca,'FontSize',16)
 %% Goal 3
 
 figure; hold on
