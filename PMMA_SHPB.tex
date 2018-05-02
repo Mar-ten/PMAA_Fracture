@@ -76,8 +76,6 @@
 \usepackage{microtype} 
 \usepackage{setspace}
 \doublespace
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% git testing ii
 
 \begin{document}
 \title{ Determination of Dynamic Initiation Fracture Toughness Using a Split Hopkinson Pressure Bar  \\ \normalsize{ME EN 6960}}
@@ -128,26 +126,33 @@ PMMA samples 25 mm in diameter and 3 mm in thickness were prepared with an 8 mm 
 \\ \\
 Samples were placed between the incident bar and transmitted bar with the center notch placed at varying angles of inclination. The lead wires hanging off of each sample were attached to a Tektronix DPO 2004B oscilloscope which was also used to record the strain gauge measurements. Fracture initiation was indicated by a drop in voltage for this signal. Strain gauges were placed on each bar approximately in the center, 1.219 m from the loading point on the striker bar and 0.965 m from the loading point on the transmitted bar. These were arranged in a full bridge configuration to isolate axial strain. Data was sampled at 125 MHz with a period of 1 ms. No filtering was used. A gas gun at a pressure of 8 psi was used to accelerate the striker bar.
 
+<<<<<<< HEAD
+Samples were placed between the incident bar and transmitted bar with the center notch placed at varying angles of inclination. The lead wires hanging off of each sample were attached to the Tektronix DPO 2004B oscilloscope which was being used to record the strain gauge measurements. This was done as a trigger mechanism, because as the crack propagated it would break the paint and the oscilloscope voltage reading would drop. Strain gauges were placed on each bar approximately in the center, 1.219m from the loading point on the striker bar and 0.965 m from the loading point on the transmitted bar. These were arranged in a full bridge configuration to isolate axial strain. Readings from these strain gauges was taken by the same oscilloscope at 125 MHz with a period of 1 ms. No filtering was used. A gas gun at a pressure of 8 psi was used to accelerate the striker bar.
+
+Samples were placed between the incident bar and transmitted bar with the center notch placed at varying angles of inclination. The lead wires hanging off of each sample were attached to the Tektronix DPO 2004B oscilloscope which was being used to record the strain gauge measaurements. This was done as a trigger mechanism, because as the crack propagated it would break the paint and the oscilloscope voltage reading would drop. Strain gauges were placed on each bar approximately in the center, 1.219m from the loading point on the striker bar and 0.965 m from the loading point on the transmitted bar. These were arranged in a full bridge configuration to isolate axial strain. Readings from these strain gauges was taken by the same oscilloscope at 125 MHz with a period of 1 ms. No filtering was used. A gas gun at a pressure of 8 psi was used to accelerate the striker bar.
+
+=======
+>>>>>>> a01a091677636709eb367330dc9b179112a2c157
 \subsection{Error and Uncertainties} % Nik/Martin
 There are several potential sources of error in the experiment. First, the specimens were manufactured with a oval slot to simulate a preexisting crack. This slot had a small length to width ratio which significantly deviates from a theoretical penny crack which has finite length but is considered to be infinitely thin. This likely causes stress fields to vary widely from theoretical predictions. Additionally, strain rate was high enough that several of the specimens underwent crack bifurcation and fractured into several pieces. This may further confound findings by altering preferred initial crack propagation pathways \cite{Meggiolaro}. 
 
 \section{Results and Discussion} % Nik/Martin
 \subsection{Rate Dependence}
-In total, six specimens were tested with a crack orientation of $0^{\circ}$ to determine the rate dependence of PMMA fracture. Strain rate ranged from 0.005 $s^{-1}$ to 60 $s^{-1}$. Results displayed in Figure \ref{fig:Goal1} show that the material initially shows an increase in strength with increased strain rate, but that trend disappeared at dynamic rates above 0.5$s^{-1}$. Ultimate strength was observed to be lower than quasi-static values in some of the dynamic tests. This finding contrasts with previously published findings by Z Jia et al. \cite{Jia}. 
+In total, six specimens were tested with a crack orientation of $0^{\circ}$ to determine the rate dependence of PMMA fracture. Strain rate ranged from 0.005 $s^{-1}$ to 60 $s^{-1}$. Results displayed in Figure \ref{fig:Goal1} show that the material shows an increase in fracture toughness with increased strain rate. This finding is consistent with previously published findings by Z. Jia et al. \cite{Jia}. 
 \subsection{Fracture Toughness}
 Nine specimens were tested dynamically at varying orientation angles. Normalized fracture toughness was calculated for each test and compared to theoretical values to form a fracture toughness locus plot in Figure \ref{fig:Goal2}. Experimental values consistently fell below theoretical values of fracture toughness. 
 \subsection{Crack Kinking Angles}
 Finally, experimental crack kinking angles were compared to kinking angle predictions given by the max hoop stress criteria. In general, the maximum hoop stress criterion was found to over-predict the crack kinking angles. This finding is in agreement with investigations by Atkinson et al. and Shetty et al. \cite{Atkinson} \cite{Shetty}.
 
 \section{Conclusion} % John
-For this report, the evaluation of dynamic properties of polymethyl methacrylate (PMMA) was completed. The dynamic initiation fracture toughness showed a positive correlation with an increase in strain rate in the quasi-static regime, with this trend disappearing in the dynamic regime. A mixed mode fracture locus was constructed for a strain rate of 31.2 $s^{-1}$, which showed normalized experimental values below normalized theoretical values. Crack kinking angle was evaluated and compared to predicted kinking angles from the maximum hoop stress criterion. Actual kinking angles were found to be generally lower than predicted values, which is in agreement with previous findings that the maximum hoop stress criterion over-predicts crack kinking angle.
+For this report, the evaluation of dynamic properties of polymethyl methacrylate (PMMA) was completed. The dynamic initiation fracture toughness showed a positive correlation with an increase in strain rate. A mixed mode fracture locus was constructed for a strain rate of 31.2 $s^{-1}$, which showed normalized experimental values below normalized theoretical values. Crack kinking angle was evaluated and compared to predicted kinking angles from the maximum hoop stress criterion. Actual kinking angles were found to be generally lower than predicted values, which is in agreement with previous findings that the maximum hoop stress criterion over-predicts crack kinking angle.
 
 
 \section{Figures} % Nik/Martin
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.67\textwidth,scale=1]{Goal1_b.png}
+	\includegraphics[width=.67\textwidth,scale=1]{Goal1.png}
 	\caption{Fracture Toughness of PMMA at varying strain rates.}
 	\label{fig:Goal1}
 \end{figure}

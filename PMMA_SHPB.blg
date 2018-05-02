@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: PMMA_SHPB.aux
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: PMMA_SHPB.aux
 The style file: ieeetr.bst
 Database file #1: Lab4Bib.bib
 You're missing a field name---line 93 of file Lab4Bib.bib
@@ -6,4 +8,64 @@ You're missing a field name---line 93 of file Lab4Bib.bib
  : % Author = {P.S. Follansbee and C. Frantz},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+<<<<<<< HEAD
+I was expecting a `,' or a `}'---line 30 of file Lab4Bib.bib
+ : 
+ : @article{Nakano,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 40 of file Lab4Bib.bib
+ : 
+ : @article{Meggiolaro,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 51 of file Lab4Bib.bib
+ : 
+ : @article{Dai,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 5 entries,
+            1876 wiz_defined-function locations,
+            514 strings with 4353 characters,
+and the built_in function-call counts, 1537 in all, are:
+= -- 152
+> -- 54
+< -- 0
++ -- 20
+- -- 15
+* -- 107
+:= -- 218
+add.period$ -- 5
+call.type$ -- 5
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 79
+empty$ -- 141
+format.name$ -- 15
+if$ -- 382
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 18
+num.names$ -- 5
+pop$ -- 12
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 60
+stack$ -- 0
+substring$ -- 120
+swap$ -- 39
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 13
+width$ -- 6
+write$ -- 50
+(There were 4 error messages)
+=======
 (There was 1 error message)
+>>>>>>> a01a091677636709eb367330dc9b179112a2c157
