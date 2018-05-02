@@ -26,7 +26,7 @@ index_shift=round(time_shift/dt);
 time_shift2=L2/speed;
 index_shift2=round(time_shift2/dt);
 
-% %% Select Window
+%% Select Window
 % 
 % figure(1)
 % plot(time,v_incident,time,v_transmitted,time,v_break);
@@ -100,7 +100,7 @@ e_trans=Volt2Strain(v_trans);
 F_1=A*E.*e_diff;
 F_2=A*E.*e_trans;
 F1max=max(F_1);
-F2max=max(F_2);
+F2max=max(abs(F_2));
 S_Ult1=2*max(F_1)/(pi*D*t);
 S_Ult2=2*max(F_2)/(pi*D*t);
 

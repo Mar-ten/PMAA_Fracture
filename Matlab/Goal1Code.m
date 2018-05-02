@@ -20,7 +20,7 @@ beta=angles.data(:,2);
 beta=[beta;0;0;0];
 F_Ult=zeros(length(List),2);
 rate=zeros(size(List));
-
+K1=zeros(length(List),1);
 for i=1:length(List)
     [F_Ult(i,1),F_Ult(i,2),rate(i)]=UltimateStrain(List{i});
 end
@@ -52,7 +52,7 @@ end
 %% Strain Rate Plot 1
 figure
 rate2=[rate(1:3);rate(end-2:end)];  % Takes values from tests with angle of 0
-K12=[K1(1:3);K1(end-2:end)]/1E6;    % Takes values from tests with angle of 0
+K12=[K1(1:3);K1(end-2:end)]./1E6;    % Takes values from tests with angle of 0
 h=plot(log10(rate2),K12,'d');
 ax=gca;
 grid on
