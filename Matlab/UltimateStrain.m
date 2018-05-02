@@ -1,4 +1,4 @@
-function [ S_Ult1,S_Ult2,rate ] = UltimateStrain( filename )
+function [ F1max,F2max,rate ] = UltimateStrain( filename )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 % Time Shifting
@@ -99,7 +99,8 @@ e_trans=Volt2Strain(v_trans);
 
 F_1=A*E.*e_diff;
 F_2=A*E.*e_trans;
-
+F1max=max(F_1);
+F2max=max(F_2);
 S_Ult1=2*max(F_1)/(pi*D*t);
 S_Ult2=2*max(F_2)/(pi*D*t);
 

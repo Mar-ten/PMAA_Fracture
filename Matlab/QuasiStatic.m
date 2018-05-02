@@ -1,4 +1,4 @@
-function [ K1,S_Ult,rate ] = QuasiStatic( filename )
+function [ K1,S_Ult,rate,maxload ] = QuasiStatic( filename )
 
 Data=importdata(filename,',',7); 
 load=Data.data(:,1);
@@ -9,10 +9,13 @@ strain=Data.data(:,5);
 a = 4/1000;
 
 strainrate=diff(strain)./diff(time); 
-rate=mode(strainrate); 
+rate=mode(strainrate);
+
+maxload=max(load);
+
 % figure; hold on
-% plot(time(2:end),strainrate)
-% plot(time(2:end),rate*ones(length(time(2:end))))
+% plot(disp,load)
+%plot(time(2:end),rate*ones(length(time(2:end))))
 S_Ult=max(stress); 
 
 K1=sqrt(pi*a)*S_Ult/1E6; 
