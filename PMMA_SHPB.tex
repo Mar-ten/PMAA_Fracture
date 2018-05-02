@@ -1,4 +1,3 @@
-
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -108,7 +107,6 @@ The biggest working assumption of a SHPB is that the stress wave propagates only
 
 \subsubsection{Dynamic Fracture Mechanics} % Nick
 
-<<<<<<< HEAD
 The fracture toughness of a material depends not only on the material properties and geometry but also on the loading rate at which the material was tested at. To calculate the Mode I and II stress intensity factors with respect to loading, the following equations are used
 
 \begin{equation}
@@ -121,10 +119,7 @@ N_I = \displaystyle\sum_{i=1}^{n} T_i(\frac{a}{R})^(2i-2) A_i(\theta)
 N_II = 2\sin2\theta\displaystyle\sum_{i=1}^{n} S_i(\frac{a}{R})^(2i-2) B_i(\theta)
 \end{equation}
 
-In brittle materials, crack initiation begins at a preexisting flaw in the material such as an impurity or microfracture. Depending on the angle of loading with relation to these flaws, some mix of Mode I and Mode II fracture will be present. This mix can be predicted by studying the angle at which the crack propagates relative to the angle of the initial fracture. This crack 'kinking' can be predicted using the maximum hoop stress failure criterion, 
-=======
-The fracture toughness of a material depends not only on the material properties and geometry but also on the loading rate at which the material was tested at. To calculate the Mode I stress intensity factor with respect to loading, In brittle materials, crack initiation begins at a pre-existing flaw in the material such as an impurity or microfracture. Depending on the angle of loading with relation to these flaws, some mix of Mode I and Mode II fracture will be present. This mix can be predicted by studying the angle at which the crack propogates relative to the angle of the initial fracture. This crack 'kinking' can be predicted using the maximum hoop stress failure criterion, 
->>>>>>> 3e7ae214e392c0eb17693b361228b441e5dcc8fa
+In brittle materials, crack initiation begins at a preexisting flaw in the material such as an impurity or microfracture. Depending on the angle of loading with relation to these flaws, some mix of Mode I and Mode II fracture will be present. This mix can be predicted by studying the angle at which the crack propagates relative to the angle of the initial fracture. This crack kinking can be predicted using the maximum hoop stress failure criterion, 
 
 \begin{equation}
 \frac{\sigma_(\theta\theta)(r,\theta*)}{\sqrt{2\pi r}} = \frac{K_I}{4}[3\cos\frac{\theta*}{2}+\cos\frac{3\theta*}{2}]-\frac{K_(II)}{4}[3\sin\frac{\theta*}{2}+3\sin\frac{3\theta*}{2}]
@@ -136,7 +131,7 @@ where $\sigma_(\theta\theta)$ is the maximum hoop stress, $r$ is the radius of t
 \gamma = \tan^(-1)(\frac{K_(II)}{K_I})
 \end{equation}
 
-Using the previous
+Using the stress intensity factors calculated above, the experimental mode mixity can be compared against that of the theoretical results.
 
 \subsection{Procedure} % Nick
 PMMA samples 25 mm in diameter and 3 mm in thickness were prepared with an 8 mm long centered slot. A razor blade was used to create a small, sharp crack in either side of the slot. Specimens were lightly sanded and had copper contacts glued onto the surface. Thin wires were soldered onto the contacts. Finally, a thin strip of silver conductive paint was drawn across the surface. These prepared samples were loaded into a SHPB with 19.05 mm diameter 7075-T6 aluminum bars. The incident bar was 2.438 m long and the transmitted bar was 1.93 m long. A 1.058 mm thick, 9.525 mm diameter lead pulse shaper was placed between the striker bar and incident bar.
