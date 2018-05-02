@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.2.16)  2 MAY 2018 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.2.16)  2 MAY 2018 15:52
 entering extended mode
 **./PMMA_SHPB.tex
 (PMMA_SHPB.tex
@@ -721,10 +721,10 @@ File: Goal1.png Graphic file (type png)
 <use Goal1.png>
 Package pdftex.def Info: Goal1.png  used on input line 157.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<Goal2.png, id=129, 421.575pt x 316.18124pt>
-File: Goal2.png Graphic file (type png)
-<use Goal2.png>
-Package pdftex.def Info: Goal2.png  used on input line 164.
+<Goal2b.png, id=129, 421.575pt x 316.18124pt>
+File: Goal2b.png Graphic file (type png)
+<use Goal2b.png>
+Package pdftex.def Info: Goal2b.png  used on input line 164.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
 
@@ -746,7 +746,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./Goal2.png (PNG copy)> <./Goal3.png (PNG copy)>])
+[7 <./Goal2b.png (PNG copy)> <./Goal3.png (PNG copy)>])
 
 AED: lastpage setting LastPage
 
@@ -771,7 +771,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
 ### bottom level 
 Here is how much of TeX's memory you used:
  12798 strings out of 493312
- 194489 string characters out of 3138902
+ 194494 string characters out of 3138902
  361945 words of memory out of 3000000
  16009 multiletter control sequences out of 15000+200000
  18333 words of font info for 102 fonts, out of 3000000 for 9000
@@ -790,7 +790,7 @@ cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PMMA_SHPB.pdf (8 pages, 629085 bytes).
+Output written on PMMA_SHPB.pdf (8 pages, 631543 bytes).
 PDF statistics:
  206 PDF objects out of 1000 (max. 8388607)
  45 named destinations out of 1000 (max. 500000)
