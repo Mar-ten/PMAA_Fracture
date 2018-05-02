@@ -45,16 +45,17 @@ v_diff=v_forward+v_back;
 
 %% Trim Data
 
-% Lcut=round(length(v_diff)/4);
-% 
-% v_forward(1:Lcut)=[]; v_forward(end-Lcut:end)=[];
-% v_back(1:Lcut)=[]; v_back(end-Lcut:end)=[];
-% v_diff(1:Lcut)=[]; v_diff(end-Lcut:end)=[];
-% v_trans(1:Lcut)=[]; v_trans(end-Lcut:end)=[];
-% v_break(1:Lcut)=[]; v_break(end-Lcut:end)=[];
+Lcut=round(length(v_diff)/4);
+
+v_forward(1:Lcut)=[]; v_forward(end-Lcut:end)=[];
+v_back(1:Lcut)=[]; v_back(end-Lcut:end)=[];
+v_diff(1:Lcut)=[]; v_diff(end-Lcut:end)=[];
+v_trans(1:Lcut)=[]; v_trans(end-Lcut:end)=[];
+v_break(1:Lcut)=[]; v_break(end-Lcut:end)=[];
 
 %% Plots
-% clipTime=(1:length(v_forward))*dt;
+clipTime=(1:length(v_forward))*dt;
+
 % figure;
 % plot(clipTime,v_forward,clipTime,v_back,clipTime,v_diff,clipTime,v_trans,clipTime,v_break)
 % legend({'Incident','Reflected','Difference','Transmitted','Conduction Gauge'},'FontSize',14);
@@ -88,11 +89,11 @@ S_Ult2=2*max(F_2)/(pi*D*t);
 
 %% Get strain Rate
 
-e_dot=speed/0.0254*(-2*e_back);
-rate=max(e_dot);
+e_dot=abs(speed/0.0254*(-2*e_back));
+rate=mean(e_dot);
 
-% figure
-% plot(clipTime,e_dot,clipTime,ones(size(clipTime))*rate)
+figure
+plot(clipTime,e_dot,clipTime,ones(size(clipTime))*rate)
 
 end
 

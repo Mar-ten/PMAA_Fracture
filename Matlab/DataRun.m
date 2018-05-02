@@ -17,7 +17,7 @@ end
 
 StaticList={'Static0_5in-min.csv';'Static0_05in-min.csv';'Static0_005in-min.csv'};
 rate=[rate;zeros(length(StaticList),1)];
-strength=[S_Ult(:,1);zeros(length(StaticList),1)];
+strength=[S_Ult(:,2);zeros(length(StaticList),1)];
 
 for i=1:length(StaticList)
     [~,strength(i+length(List)),rate(i+length(List))]=QuasiStatic(StaticList{i});
@@ -25,10 +25,10 @@ end
 
 K1=sqrt(pi*0.004)*strength/1E6;
 %% Strain Rate Plot
-
-
 figure
-h=plot(log(rate),K1,'d');
+rate2=[rate(1:3);rate(end-2:end)];  % Takes values from tests with angle of 0
+K12=[K1(1:3);K1(end-2:end)];    % Takes values from tests with angle of 0
+h=plot(log(rate2),K12,'d');
 ax=gca;
 grid on
 xlabel('$log(\dot{\varepsilon}) \left[\frac{1}{s}\right]$','Interpreter','latex')
