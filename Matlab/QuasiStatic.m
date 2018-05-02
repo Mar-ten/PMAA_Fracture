@@ -13,8 +13,8 @@ rate=mode(strainrate);
 
 maxload=max(load);
 
-figure; hold on
-plot(disp,load)
+% figure; hold on
+% plot(disp,load)
 %plot(time(2:end),rate*ones(length(time(2:end))))
 S_Ult=max(stress); 
 

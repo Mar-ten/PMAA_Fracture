@@ -12,21 +12,19 @@ B=3/1000;
 
 alpha=0:5:90;
 
-K_I=sqrt(pi*a).*cosd(beta).^2;
-K_II=sqrt(pi*a).*cosd(beta).*sind(beta);
-
 
 for i= 1:length(beta)
     [K_I(i),K_II(i),N1(i),N2(i)]=SIF_Brazil(1,beta(i)); % Creates normalized values of K1 and K2 
 end
-load('strength.mat')
-strength=strength(1:9);
-P=strength.*pi*B*R;
+loads =1.0e+03 *[2.3603;2.0797;1.7526;2.0330;2.0797;1.6124;1.7993;1.6124;1.7059];
+% strength=strength(1:9);
+% P=strength.*pi*B*R;
 
 for i= 1:length(beta)
-    [K1(i),K2(i),N1(i),N2(i)]=SIF_Brazil(P(i),beta(i)); % Creates normalized values of K1 and K2 
+    [K1(i),K2(i),N1(i),N2(i)]=SIF_Brazil(loads(i),beta(i)); % Creates normalized values of K1 and K2 
 end
-
+K_I=sqrt(pi*a).*cosd(beta).^2;
+K_II=sqrt(pi*a).*cosd(beta).*sind(beta);
 
 T_Max=-2*atand(K_I./(4.*K_II)-1/4*sqrt((K_I./K_II).^2+8));
 T_Max(isnan(T_Max))=0;
