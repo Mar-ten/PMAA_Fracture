@@ -19,7 +19,7 @@ end
 loads =1.0e+03 *[2.3603;2.0797;1.7526;2.0330;2.0797;1.6124;1.7993;1.6124;1.7059];
 % strength=strength(1:9);
 % P=strength.*pi*B*R;
-
+strength=loads/(pi*B*R);
 for i= 1:length(beta)
     [K1(i),K2(i),N1(i),N2(i)]=SIF_Brazil(loads(i),beta(i)); % Creates normalized values of K1 and K2 
 end
@@ -43,8 +43,8 @@ KC=(K_I./4.*(3*cosd(T_Max./2)+cosd(3*T_Max./2)))-3/4*(sind(T_Max./2)+sind(3*T_Ma
 % K2_Norm=K_II./K2_S;
 
 
-% K1=strength.*sqrt(pi*a).*cosd(beta).^2;
-% K2=strength.*sqrt(pi*a).*cosd(beta).*sind(beta);
+K1=strength.*sqrt(pi*a).*cosd(beta).^2;
+K2=strength.*sqrt(pi*a).*cosd(beta).*sind(beta);
 
 
 figure; hold on
