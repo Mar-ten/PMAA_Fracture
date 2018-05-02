@@ -1,4 +1,3 @@
-
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -77,8 +76,6 @@
 \usepackage{microtype} 
 \usepackage{setspace}
 \doublespace
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% git testing ii
 
 \begin{document}
 \title{ Determination of Dynamic Initiation Fracture Toughness Using a Split Hopkinson Pressure Bar  \\ \normalsize{ME EN 6960}}
@@ -92,9 +89,9 @@ In this work, the dynamic initiation fracture toughness of polymethyl methacryla
 
 \section{Introduction} % John
 
-Accurate predictions of dynamic fracture in brittle materials are important for structural design. A major challenge in dynamic material testing is accounting for the inertial effects of a rapidly moving loading apparatus. To overcome this challenge, Kolsky adapted a pressure bar technique originally used by Hopkinson to strike thin material specimens at high speeds \cite{Kolsky}. The long and thin bars of a Split-Hopkinson Pressure Bar (SHPB), combined with a thin material specimen, allow strain measurements from the bars to be analyzed with one dimensional wave analysis. This simplification of three dimensional mechanics down to a single dimension allows for the inertia of the striker bar to be accounted for.
+Accurate predictions of dynamic fracture in brittle materials are important for structural design. A major challenge in dynamic material testing is accounting for the inertial effects of a rapidly moving loading apparatus. To overcome this challenge, Kolsky adapted a pressure bar technique originally used by Hopkinson to strike thin material specimens at high speeds \cite{Kolsky}. The long and thin bars of a Split-Hopkinson Pressure Bar (SHPB), combined with a thin material specimen, allow strain measurements from the bars to be analyzed with one dimensional wave analysis. 
 \\ \\
-In this report, the dynamic fracture behavior of polymethyl methacrylate (PMMA) will be investigated using a center notch Brazil Disc specimen. The strain rate dependence of Mode I dynamic initiation fracture toughness $K_{1C}$ can be determined by alignment of the Brazil Disc specimen such that the crack is aligned on the axis of the applied dynamic load. Further investigation of mixed mode loading can be completed by rotating the specimen to different angles, creating Mode I and Mode II fracture \cite{Atkinson} \cite{Shetty}. At a given strain rate, the level of mode mixity can be viewed using a mixed mode fracture toughness locus \cite{Nakano}. Finally, the crack kinking angle as a function of mode mixity can by visually confirmed using ImageJ software and compared theoretically to the Maximum Hoop Stress Criterion for crack initiation \cite{Meggiolaro}.  
+In this report, the dynamic fracture behavior of polymethyl methacrylate (PMMA) will be investigated using a center notch Brazil Disc specimen. The strain rate dependence of Mode I dynamic initiation fracture toughness $K_{1C}$ was determined by alignment of the Brazil Disc specimen such that the crack is aligned on the axis of the applied dynamic load. Further investigation of mixed mode loading was completed by rotating the specimen to different angles, creating Mode I and Mode II fracture \cite{Atkinson} \cite{Shetty}. At a given strain rate, the level of mode mixity was viewed using a mixed mode fracture toughness locus \cite{Nakano}. Finally, the crack kinking angle as a function of mode mixity was measured using ImageJ software and compared to the Maximum Hoop Stress Criterion for crack initiation \cite{ImageJ} \cite{Meggiolaro}.  
  
 \section{Methods}
 
@@ -102,69 +99,75 @@ In this report, the dynamic fracture behavior of polymethyl methacrylate (PMMA) 
 
 \subsubsection {Split Hopkinson Pressure Bar} % Nick
 
-A Split Hopkinson Pressure Bar (SHPB) is built off of three main parts, the striker bar, the incident bar, and the transmitted bar (Frew, Follansbee, Frew2001). A gas gun is used to accelerate the striker bar into the incident bar creating a compression wave down the length of the bar (Frew 2001). Upon reaching a sample placed between the incident and transmitted bars, this pulse deforms the sample at a high strain rate, imparting a new compression wave into the transmitted bar (Dai). The remainder of the energy is reflected back as a tensile wave (gama). The initial pulse has a wavelength twice the length of the striker bar, necessitating an incident bar length at least four times that of the striker bar.
-\\ \\
-The biggest working assumption of a SHPB is that the stress wave propagates only along the length of the bar. In order for this to be true, the bar must be made from ma homogenous, isotropic material with a uniform cross section. Additionally, the incident bar material's elastic limit must not be exceeded by the impact of the striker bar (gama). If the length of the bar is at least twenty times greater than its diameter, it can be assumed that the stress is uniform across the cross section (Davies). In finite length bars, dispersion must be compensated for as well because different frequencies travel at different speeds within a medium (Gama). This is done by pulse shaping and post-processing. Pulse shaping is the use of a sacrificial material to reduce the initial slope of the incident pulse to more closely resemble the specimen material response (Frew). This reduces the high frequency content of the resulting signal. Post processing equations use known wave velocities to calculate the change in phase angle as the pulse moves down the length of the bar. This then allows the pulse to be reconstructed at any point in time in the form it was at that point. Once the wave has been reconstructed at the instant the specimen began to be strained, the measured voltages are converted into strains. These strains are then used to calculate forces, which in turn are converted into stress if so desired. 
+A Split Hopkinson Pressure Bar (SHPB) is built off of three main parts, the striker bar, the incident bar, and the transmitted bar \cite{Frew} \cite{Frew2002}. A gas gun is used to accelerate the striker bar into the incident bar creating a compression wave down the length of the bar \cite{Frew}. Upon reaching a sample placed between the incident and transmitted bars, this pulse deforms the sample at a high strain rate, imparting a new compression wave into the transmitted bar \cite{Dai}. The remainder of the energy is reflected back as a tensile wave \cite{Gama}. In finite length bars, dispersion must be compensated for as well because different frequencies travel at different speeds within a medium \cite{Gama}. This is done by pulse shaping. Pulse shaping is the use of a sacrificial material to reduce the initial slope of the incident pulse to more closely resemble the specimen material response \cite{Frew2002}. This reduces the high frequency content of the resulting signal. Once the wave has been reconstructed at the instant the specimen began to fracture, the measured voltages are converted into strains. These strains are then used to calculate forces, which in turn are converted into stress if so desired. 
 
 \subsubsection{Dynamic Fracture Mechanics} % Nick
 
-The fracture toughness of a material depends not only on the material properties and geometry but also on the loading rate at which the material was tested at. To calculate the Mode I stress intensity factor with respect to loading, 
+The fracture toughness of a material depends not only on the material properties and geometry but also on the loading rate. To calculate the Mode I and II stress intensity factors with respect to loading, the following equations are used
 
-In brittle materials, crack initiation begins at a pre-existing flaw in the material such as an impurity or microfracture. Depending on the angle of loading with relation to these flaws, some mix of Mode I and Mode II fracture will be present. This mix can be predicted by studying the angle at which the crack propogates relative to the angle of the initial fracture. This crack 'kinking' can be predicted using the maximum hoop stress failure criterion, 
+\begin{align}
+K_I &= \frac{P\sqrt{a}}{\sqrt{\pi}RB}N_I\\
+K_{II} &= \frac{P\sqrt{a}}{\sqrt{\pi}RB}N_{II}\\
+N_I &= \displaystyle\sum_{i=1}^{n} T_i\left(\frac{a}{R}\right)^{2i-2} A_i(\theta)\\
+N_{II} &= 2\sin2\theta\displaystyle\sum_{i=1}^{n} S_i\left(\frac{a}{R}\right)^{2i-2}B_i(\theta)
+\end{align}
+where $P$ is the applied load, $a$ is crack length, $R$ is radius of speciment, $B$ is thickness of specimen, $\theta$ is inclination angle, and $A_i, B_i, S_i$ and $T_i$ are factors solved numerically and given by Atkinson et al. \cite{Atkinson}.
+\\ \\
+In brittle materials, crack initiation begins at a preexisting flaw in the material such as an impurity or microfracture. Depending on the angle of loading with relation to these flaws, some mix of Mode I and Mode II fracture will be present. This mix can be predicted by studying the angle at which the crack propagates relative to the angle of the initial fracture. This crack kinking can be predicted using the maximum hoop stress failure criterion, 
 
 \begin{equation}
-\frac{\sigma_(\theta\theta)(r,\theta*)}{\sqrt{2\pi r}} = \frac{K_I}{4}[3cos\frac{\theta*}{2}+cos\frac{3\theta*}{2}]-\frac{K_(II)}{4}[3sin\frac{\theta*}{2}+3sin\frac{3\theta*}{2}]
+\frac{\sigma_{\theta\theta}(r,\theta*)}{\sqrt{2\pi r}} = \frac{K_I}{4}\left[3\cos\frac{\theta*}{2}+\cos\frac{3\theta*}{2}\right]-\frac{K_{II}}{4}\left[3\sin\frac{\theta*}{2}+3\sin\frac{3\theta*}{2}\right]
 \end{equation}
 
-where $\sigma_(\theta\theta)$ is the maximum hoop stress, $r$ is the radius of the sample, $K_(I)$ and $K_(II)$ are the mode I and II dynamic stress intensity factors, and $\theta$ is the crack kinking angle. Mode mixity, $\gamma$ is then defined by:
-
-\begin{equation}
-\gamma = tan^(-1)(\frac{K_(II)}{K_I})
-\end{equation}
+where $\sigma_{\theta\theta}$ is the maximum hoop stress, $r$ is the radius of the sample, $K_{I}$ and $K_{II}$ are the Mode I and II dynamic stress intensity factors, and $\theta$ is the crack kinking angle. 
 
 \subsection{Procedure} % Nick
 PMMA samples 25 mm in diameter and 3 mm in thickness were prepared with an 8 mm long centered slot. A razor blade was used to create a small, sharp crack in either side of the slot. Specimens were lightly sanded and had copper contacts glued onto the surface. Thin wires were soldered onto the contacts. Finally, a thin strip of silver conductive paint was drawn across the surface. These prepared samples were loaded into a SHPB with 19.05 mm diameter 7075-T6 aluminum bars. The incident bar was 2.438 m long and the transmitted bar was 1.93 m long. A 1.058 mm thick, 9.525 mm diameter lead pulse shaper was placed between the striker bar and incident bar.
 \\ \\
+Samples were placed between the incident bar and transmitted bar with the center notch placed at varying angles of inclination. The lead wires hanging off of each sample were attached to a Tektronix DPO 2004B oscilloscope which was also used to record the strain gauge measurements. Fracture initiation was indicated by a drop in voltage for this signal. Strain gauges were placed on each bar approximately in the center, 1.219 m from the loading point on the striker bar and 0.965 m from the loading point on the transmitted bar. These were arranged in a full bridge configuration to isolate axial strain. Data was sampled at 125 MHz with a period of 1 ms. No filtering was used. A gas gun at a pressure of 8 psi was used to accelerate the striker bar.
 
+<<<<<<< HEAD
 Samples were placed between the incident bar and transmitted bar with the center notch placed at varying angles of inclination. The lead wires hanging off of each sample were attached to the Tektronix DPO 2004B oscilloscope which was being used to record the strain gauge measurements. This was done as a trigger mechanism, because as the crack propagated it would break the paint and the oscilloscope voltage reading would drop. Strain gauges were placed on each bar approximately in the center, 1.219m from the loading point on the striker bar and 0.965 m from the loading point on the transmitted bar. These were arranged in a full bridge configuration to isolate axial strain. Readings from these strain gauges was taken by the same oscilloscope at 125 MHz with a period of 1 ms. No filtering was used. A gas gun at a pressure of 8 psi was used to accelerate the striker bar.
 
 Samples were placed between the incident bar and transmitted bar with the center notch placed at varying angles of inclination. The lead wires hanging off of each sample were attached to the Tektronix DPO 2004B oscilloscope which was being used to record the strain gauge measaurements. This was done as a trigger mechanism, because as the crack propagated it would break the paint and the oscilloscope voltage reading would drop. Strain gauges were placed on each bar approximately in the center, 1.219m from the loading point on the striker bar and 0.965 m from the loading point on the transmitted bar. These were arranged in a full bridge configuration to isolate axial strain. Readings from these strain gauges was taken by the same oscilloscope at 125 MHz with a period of 1 ms. No filtering was used. A gas gun at a pressure of 8 psi was used to accelerate the striker bar.
 
+=======
+>>>>>>> a01a091677636709eb367330dc9b179112a2c157
 \subsection{Error and Uncertainties} % Nik/Martin
-There are several potential sources of error in the experiment. First, the specimens were manufactured with a oval slot to simulate a pre-existing crack. This slot had a small length to width ratio which significantly deviates from a theoretical penny crack which has finite length but is considered to infinitely thin. This likely causes stress fields to vary widely from theoretical predictions. Additionally, strain rate was high enough that several of the specimens underwent crack bifurcation and fractured into several pieces. This may further confound findings by altering preferred initial crack propagation pathways. 
+There are several potential sources of error in the experiment. First, the specimens were manufactured with a oval slot to simulate a preexisting crack. This slot had a small length to width ratio which significantly deviates from a theoretical penny crack which has finite length but is considered to be infinitely thin. This likely causes stress fields to vary widely from theoretical predictions. Additionally, strain rate was high enough that several of the specimens underwent crack bifurcation and fractured into several pieces. This may further confound findings by altering preferred initial crack propagation pathways \cite{Meggiolaro}. 
 
 \section{Results and Discussion} % Nik/Martin
 \subsection{Rate Dependence}
-In total, six specimens were tested with a crack orientation of $0^{\circ}$ to determine the rate dependence of PMMA fracture. Strain rate ranged from 0.005 $s^{-1}$ to 60 $s^{-1}$. Results displayed in Figure \ref{fig:Goal1} show that the material initially shows an increase in strength with increased strain rate, but that trend disappeared at dynamic rates above 0.5$s^{-1}$. Ultimate strength was observed to be lower than quasi-static values in some of the dynamic tests. This finding contrasts with previously published findings by (need reference) 
+In total, six specimens were tested with a crack orientation of $0^{\circ}$ to determine the rate dependence of PMMA fracture. Strain rate ranged from 0.005 $s^{-1}$ to 60 $s^{-1}$. Results displayed in Figure \ref{fig:Goal1} show that the material shows an increase in fracture toughness with increased strain rate. This finding is consistent with previously published findings by Z. Jia et al. \cite{Jia}. 
 \subsection{Fracture Toughness}
 Nine specimens were tested dynamically at varying orientation angles. Normalized fracture toughness was calculated for each test and compared to theoretical values to form a fracture toughness locus plot in Figure \ref{fig:Goal2}. Experimental values consistently fell below theoretical values of fracture toughness. 
 \subsection{Crack Kinking Angles}
-Finally, experimental crack kinking angles were compared to kinking angle predictions given by the max hoop stress criteria.  In general, the maximum hoop stress criterion was found to over-predict the crack kinking angles. This finding is in agreement with investigations by Atkinson et al. and Shetty et.al \cite{Atkinson} \cite{Shetty}.
+Finally, experimental crack kinking angles were compared to kinking angle predictions given by the max hoop stress criteria. In general, the maximum hoop stress criterion was found to over-predict the crack kinking angles. This finding is in agreement with investigations by Atkinson et al. and Shetty et al. \cite{Atkinson} \cite{Shetty}.
 
 \section{Conclusion} % John
-For this report, the evaluation of dynamic properties of polymethyl methacrylate (PMMA) was completed. The dynamic initiation fracture toughness showed a positive correlation with an increase in strain rate in the quasi-static regime, with this trend disappearing in the dynamic regime. A mixed mode fracture locus was constructed for a strain rate of 31.2 $s^{-1}$, which showed normalized experimental values below normalized theoretical values. Crack kinking angle was evaluated and compared to predicted kinking angles from the maximum hoop stress criterion. Actual kinking angles were found to be generally lower than predicted values, which is in agreement with previous findings that the maximum hoop stress criterion over-predicts crack kinking angle.
+For this report, the evaluation of dynamic properties of polymethyl methacrylate (PMMA) was completed. The dynamic initiation fracture toughness showed a positive correlation with an increase in strain rate. A mixed mode fracture locus was constructed for a strain rate of 31.2 $s^{-1}$, which showed normalized experimental values below normalized theoretical values. Crack kinking angle was evaluated and compared to predicted kinking angles from the maximum hoop stress criterion. Actual kinking angles were found to be generally lower than predicted values, which is in agreement with previous findings that the maximum hoop stress criterion over-predicts crack kinking angle.
 
 
 \section{Figures} % Nik/Martin
 
-\begin{figure}[H], 
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=.67\textwidth,scale=1]{Goal1_b.png}
-	\caption{}
+	\includegraphics[width=.67\textwidth,scale=1]{Goal1.png}
+	\caption{Fracture Toughness of PMMA at varying strain rates.}
 	\label{fig:Goal1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.67\textwidth,scale=1]{Goal2.png}
-	\caption{}
+	\caption{Mixed Mode fracture locus at a strain rate of 31.2 $s^{-1}$.}
 	\label{fig:Goal2}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.67\textwidth,scale=1]{Goal3_b.png}
-	\caption{}
+	\caption{Crank Kinking Angle as a function of crack orientation.}
 	\label{fig:Goal3}
 \end{figure}
 

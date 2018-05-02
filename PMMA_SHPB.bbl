@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Kolsky}
 H.~Kolsky, ``An investigation of the mechanical properties of materials at very
@@ -20,9 +20,37 @@ M.~Nakano, K.~Kishida, Y.~Yamauchi, and Y.~Sogabe, ``Dynamic fracture
   initiation in brittle materials under combined mode i/ii loading,'' {\em
   Journal de Physique IV Colloque}, vol.~04 (C8), pp.~695--700, 1994.
 
+\bibitem{ImageJ}
+W.~S. Rasband, ``Imagej,'' {\em U. S. National Institutes of Health, Bethesda
+  Maryland}, 1997-2016.
+
 \bibitem{Meggiolaro}
 M.~A. Meggiolaro, A.~C.~O. Miranda, J.~T.~P. Castro, and L.~F. Martha, ``Stress
   intensity factor equations for branched crack growth,'' {\em Engineering
   Fracture Mechanics}, vol.~72, pp.~2647--2671, 2005.
+
+\bibitem{Frew}
+D.~Frew, M.~J. Forrestal, and W.~Chen, ``A split hopkinson pressure bar
+  technique to determine compresive stress-strain data for rock materials,''
+  {\em Experimantal Mechincs}, vol.~41, pp.~40--46, 2001.
+
+\bibitem{Frew2002}
+D.~Frew, M.~J. Forrestal, and W.~Chen, ``Pulse shaping techniques for testing
+  brittle materials with a split hopkinson pressure bar,'' {\em Experimantal
+  Mechincs}, vol.~42, pp.~93--106, 2002.
+
+\bibitem{Dai}
+F.~Dai, S.~Huang, K.~Xia, and Z.~Tan, ``Some fundemental issues in dynamic
+  compresion and tension test of rocks using split hopkinson pressure bar,''
+  {\em Rock Meck Rock Eng}, 2010.
+
+\bibitem{Gama}
+B.~A. Gama, S.~L. Lopatnikov, and J.~W.~G. Jr., ``Hopkinson bar experimental
+  technique: A critical review,'' {\em Applied Mechanics}, 2004.
+
+\bibitem{Jia}
+Z.~Jia, A.~Castro-Montero, and S.~Shah, ``Observation of mixed mode fracture
+  with center notched disk specimens,'' {\em Cement and Concrete research},
+  vol.~26.1, pp.~125--137, 1996.
 
 \end{thebibliography}
