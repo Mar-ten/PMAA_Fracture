@@ -10,9 +10,9 @@ a = 4/1000;
 
 strainrate=diff(strain)./diff(time); 
 rate=mode(strainrate); 
-% figure; hold on
-% plot(time(2:end),strainrate)
-% plot(time(2:end),rate*ones(length(time(2:end))))
+figure;
+plot(time(2:end),strainrate)
+plot(time(2:end)
 S_Ult=max(stress); 
 
 K1=sqrt(pi*a)*S_Ult/1E6; 

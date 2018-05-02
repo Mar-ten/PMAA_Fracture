@@ -2,6 +2,7 @@ function [ S_Ult1,S_Ult2,rate ] = UltimateStrain( filename )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 % Time Shifting
+% close all
 
 data=importdata(filename,',',16);
 time=data.data(:,1);
@@ -9,11 +10,8 @@ v_incident=data.data(:,2);
 v_transmitted=data.data(:,4);
 v_break=data.data(:,6);
 
-% figure
-% plot(time,v_incident,time,v_transmitted,time,v_break)
-
 speed = 5.0732e+03; %Original Value
-                    %speed = 5.05e+03;
+%speed = 5.05e+03;
 D=0.01905;          % Bar diameter = 3/4 inch
 A=pi*((D/2)^2);     % cross sectional area of bar
 E=70.3e9;           % elastic modulus of bar
@@ -28,6 +26,23 @@ index_shift=round(time_shift/dt);
 time_shift2=L2/speed;
 index_shift2=round(time_shift2/dt);
 
+% %% Select Window
+% 
+% figure(1)
+% plot(time,v_incident,time,v_transmitted,time,v_break);
+% ax=gca;
+% pts=getrect(ax);
+% close(1)
+% 
+% T1=pts(1);
+% DT=pts(3);
+% i_1=round(T1/dt);
+% i_2=round((T1+DT)/dt);
+% 
+% 
+% v_incident(i_2:end)=[]; v_incident(1:i_1)=[];
+% v_transmitted(i_2:end)=[]; v_transmitted(1:i_1)=[];
+% v_break(i_2:end)=[]; v_break(1:i_1)=[];
 
 %% Pad and Shift Data
 pad=zeros(index_shift,1);
@@ -45,16 +60,18 @@ v_diff=v_forward+v_back;
 
 %% Trim Data
 
-% Lcut=round(length(v_diff)/4);
-% 
+Lcut=round(length(v_diff)/4);
+
 % v_forward(1:Lcut)=[]; v_forward(end-Lcut:end)=[];
 % v_back(1:Lcut)=[]; v_back(end-Lcut:end)=[];
 % v_diff(1:Lcut)=[]; v_diff(end-Lcut:end)=[];
 % v_trans(1:Lcut)=[]; v_trans(end-Lcut:end)=[];
 % v_break(1:Lcut)=[]; v_break(end-Lcut:end)=[];
 
+
 %% Plots
-% clipTime=(1:length(v_forward))*dt;
+clipTime=(1:length(v_forward))*dt;
+
 % figure;
 % plot(clipTime,v_forward,clipTime,v_back,clipTime,v_diff,clipTime,v_trans,clipTime,v_break)
 % legend({'Incident','Reflected','Difference','Transmitted','Conduction Gauge'},'FontSize',14);
@@ -88,8 +105,8 @@ S_Ult2=2*max(F_2)/(pi*D*t);
 
 %% Get strain Rate
 
-e_dot=speed/0.0254*(-2*e_back);
-rate=max(e_dot);
+e_dot=abs(speed/0.0254*(-2*e_back));
+rate=mean(e_dot);
 
 % figure
 % plot(clipTime,e_dot,clipTime,ones(size(clipTime))*rate)
