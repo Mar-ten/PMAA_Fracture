@@ -5,9 +5,9 @@
 % theta is inclination angle in degrees
 function [K_I,K_II,N_I,N_II] = SIF_Brazil(P,theta)
 
-a = 4; % [mm] Half of the intial crack length
-b = 3; % [mm] thickness of specimen
-r = 25/2; % [mm] radius of disk
+a = 4/1000; % [mm] Half of the intial crack length
+b = 3/1000; % [mm] thickness of specimen
+r = 25/2/1000; % [mm] radius of disk
 ratio = a/r;
 
 % Ai theta and Bi thetas constants from table found in Atkinson
