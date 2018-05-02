@@ -1,24 +1,9 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: PMMA_SHPB.aux
 The style file: ieeetr.bst
 Database file #1: Lab4Bib.bib
-I was expecting a `,' or a `}'---line 20 of file Lab4Bib.bib
+You're missing a field name---line 93 of file Lab4Bib.bib
  : 
- : @article{Shetty,
+ : % Author = {P.S. Follansbee and C. Frantz},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 30 of file Lab4Bib.bib
- : 
- : @article{Nakano,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 40 of file Lab4Bib.bib
- : 
- : @article{Meggiolaro,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 51 of file Lab4Bib.bib
- : 
- : @article{Dai,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-(There were 4 error messages)
+(There was 1 error message)
