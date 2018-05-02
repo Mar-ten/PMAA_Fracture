@@ -17,7 +17,7 @@ B=3/1000;
 
 angles=importdata('Angles2.xlsx');
 beta=angles.data(:,2);
-
+beta=[beta;0;0;0];
 S_Ult=zeros(length(List),2);
 rate=zeros(size(List));
 for i=1:length(List)
@@ -34,11 +34,11 @@ for i=1:length(StaticList)
 end
 
 
-P=strength*pi*R*B;
-
-for i= 1:length(beta)
-    [K1(i),K2(i),N1(i),N2(i)]=SIF_Brazil(P(i),beta(i)); % Creates normalized values of K1 and K2 
-end
+% P=strength*pi*R*B;
+% 
+% for i= 1:length(beta)
+%     [K1(i),K2(i),N1(i),N2(i)]=SIF_Brazil(P(i),beta(i)); % Creates normalized values of K1 and K2 
+% end
 
 K1=sqrt(pi*0.004)*strength/1E6;
 %% Strain Rate Plot 1
